@@ -1,0 +1,17 @@
+{% extends "quotesapp/base.html" %} {% load extract_tags %}
+
+{% block content %}
+
+<h1>Quote ID: {{ quote.id }}</h1>
+
+<p>Author ID: <kbd>{{ quote.author.fullname }}</kbd> </p>
+
+<p>Quote tags:  <small> {{ quote.tags|tags }} </small>  </p>
+
+<p>Quote:
+<span>
+    {{quote.quote}}
+</span>
+</p>
+
+{% endblock %}
